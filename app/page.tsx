@@ -1,95 +1,26 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-neutral-950 text-white">
+      <div className="text-center px-6 py-20">
+        <h1 className="text-5xl md:text-6xl font-bold text-amber-400 mb-6">
+          HeavyIron Consults
+        </h1>
+        <p className="text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-10">
+          Business & AI Consulting for Construction, Heavy Equipment, and Skilled Trades.
+          We help companies modernize operations, elevate branding, and dominate RFQs.
+        </p>
+        <button className="bg-amber-400 text-neutral-950 px-8 py-3 rounded-lg font-semibold hover:bg-amber-500 transition">
+          Join the HeavyIron Network
+        </button>
+      </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-20">
+        <Image src="/excavator.jpg" alt="Excavator" width={500} height={300} className="rounded-lg object-cover" />
+        <Image src="/city-skyline.jpg" alt="City Skyline" width={500} height={300} className="rounded-lg object-cover" />
+        <Image src="/camera.jpg" alt="Camera" width={500} height={300} className="rounded-lg object-cover" />
+      </div>
+    </main>
+  )
 }
